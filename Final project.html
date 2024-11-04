@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Postcard</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8f0f2;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        width: 350px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .balloons {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 150px;
+        height: 150px;
+        background-color: #ffd700;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      .balloons::before,
+      .balloons::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ff6347;
+        opacity: 0.8;
+      }
+      .balloons::before {
+        width: 120px;
+        height: 120px;
+        top: -80px;
+        left: 40px;
+      }
+      .balloons::after {
+        width: 90px;
+        height: 90px;
+        top: 20px;
+        right: 30px;
+      }
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin: 20px 0;
+      }
+      p {
+        color: #555;
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        font-size: 1em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background-color: #ff85c5;
+      }
+      #celebrationVideo {
+        display: none;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 15px;
+      }
+    </style>
+    <script>
+      function showVideo() {
+        document.querySelector(".card").style.display = "none";
+        document.getElementById("celebrationVideo").style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="balloons"></div>
+      <h1>Happy Birthday To PLOY</h1>
+      <p>ขอให้มีความสุขมากๆ ขอให้ยิ้มทุกวัน ยิ้มเยอะๆๆๆๆๆเลย</p>
+      <button class="btn" onclick="showVideo()">ฉลองกันนนนน🌻</button>
+    </div>
+    <video id="celebrationVideo" controls muted>
+      <source src="752415577.995613.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
